@@ -1,4 +1,4 @@
-package U09.EjerciciosColecciones;
+package U09.EjerciciosColecciones.Ej1;
 
 import java.util.ArrayList;
 
