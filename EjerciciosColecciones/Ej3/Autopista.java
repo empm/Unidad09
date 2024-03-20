@@ -1,5 +1,8 @@
 package U09.EjerciciosColecciones.Ej3;
 
+import java.util.LinkedList;
+import java.util.Scanner;
+
 /*
  * Entendiendo enunciado
  */
@@ -25,10 +28,54 @@ package U09.EjerciciosColecciones.Ej3;
  * 
  */
 public class Autopista {
+    LinkedList<Coche> carriles;
 
+    public Autopista() {
+        carriles = new LinkedList<>();
+    }
+
+    public void addCoche(Coche c) {
+        carriles.addFirst(c);
+    }
 
     public static void main(String[] args) {
+        Autopista peaje = new Autopista();
 
+        Scanner scan = new Scanner(System.in);
+        int menu;
+
+        do {
+            System.out.println("Selecciona un acción");
+            System.out.println("--------------------");
+            System.out.println("0. Salir\n1. Añadir coche\n2. Eliminar coche\n3. Ver cola\n");
+
+            menu = scan.nextInt();
+            System.out.println();
+
+            String matricula, modelo, color;
+
+            switch (menu) {
+                case 0:
+                    System.out.println("Saliendo...");
+                    break;
+
+                case 1:
+                System.out.println("Añadir coche: ");
+                System.out.println("Escribe matricula: ");
+                matricula = scan.nextLine();
+                System.out.println("Escribe modelo: ");
+                modelo = scan.nextLine();
+                System.out.println("Escribe color: ");
+                color = scan.nextLine();
+                peaje.addCoche(new Coche(matricula, modelo, color));
+                    break;
+
+                default:
+                System.out.println("Selecciona otro numero");
+                    break;
+            }
+
+        } while (menu != 0);
     }
 }
 
@@ -36,7 +83,7 @@ enum Ventanilla {
     EFECTIVO, IMPORTE_EXACTO, TARJETA
 }
 
-class Coche{
+class Coche {
 
     // Atributos
     protected String matricula;
@@ -54,20 +101,24 @@ class Coche{
     public String getMatricula() {
         return matricula;
     }
+
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
     public String getModelo() {
         return modelo;
     }
+
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
     public String getColor() {
         return color;
     }
+
     public void setColor(String color) {
         this.color = color;
     }
-
 }
