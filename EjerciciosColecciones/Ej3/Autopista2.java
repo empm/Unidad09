@@ -35,52 +35,42 @@ public class Autopista2 {
     }
 
     public void addCoche(Coche c) {
-        carriles.addFirst(c);
+        carriles.addLast(c);
     }
+    public void delCoche() {
+        carriles.removeFirst();
+    }
+
+    // metodo para mostrar y ver que hace
+
+    public void showCoche(){
+        System.out.println("Mostrando coches: ");
+        for (Coche coche : carriles) {
+            System.out.println(coche.modelo);
+        }
+    }
+
+    public void exitApp(){
+       
+    }
+
 
     public static void main(String[] args) {
-        Autopista2 peaje = new Autopista2();
 
-        Scanner scan = new Scanner(System.in);
-        int menu;
+        // Crear un metodo para crear coches - fuera del main
+        Coche audi = new Coche("023939AVS", "a3", "Gris");
+        Coche bmw = new Coche("234234BBS", "M3", "Verde");
+        
+        Autopista2 efectivo = new Autopista2();
+        Autopista2 exacto = new Autopista2();
+        Autopista2 tarjeta = new Autopista2();
 
-        do {
-            System.out.println("Selecciona un acción");
-            System.out.println("--------------------");
-            System.out.println("0. Salir\n1. Añadir coche\n2. Eliminar coche\n3. Ver cola\n");
-
-            menu = scan.nextInt();
-            System.out.println();
-
-            String matricula, modelo, color;
-
-            switch (menu) {
-                case 0:
-                    System.out.println("Saliendo...");
-                    break;
-
-                case 1:
-                System.out.println("Añadir coche: ");
-                System.out.println("Escribe matricula: ");
-                matricula = scan.nextLine();
-                System.out.println("Escribe modelo: ");
-                modelo = scan.nextLine();
-                System.out.println("Escribe color: ");
-                color = scan.nextLine();
-                peaje.addCoche(new Coche(matricula, modelo, color));
-                    break;
-
-                default:
-                System.out.println("Selecciona otro numero");
-                    break;
-            }
-
-        } while (menu != 0);
+        efectivo.addCoche(audi);
+        efectivo.addCoche(bmw);
+        efectivo.showCoche();
+        efectivo.delCoche();
+        efectivo.showCoche();
     }
-}
-
-enum Ventanilla {
-    EFECTIVO, IMPORTE_EXACTO, TARJETA
 }
 
 class Coche {

@@ -38,10 +38,17 @@ public class Autopista {
         carriles.addFirst(c);
     }
 
+    public void showCoche(){
+        System.out.println("Mostrando coches: ");
+        for (Coche coche : carriles) {
+            System.out.println(coche.modelo);
+        }
+    }
+
     public static void main(String[] args) {
         Autopista peaje = new Autopista();
-
         Scanner scan = new Scanner(System.in);
+        
         int menu;
 
         do {
@@ -51,7 +58,7 @@ public class Autopista {
 
             menu = scan.nextInt();
             System.out.println();
-
+            
             String matricula, modelo, color;
 
             switch (menu) {
@@ -59,15 +66,21 @@ public class Autopista {
                     System.out.println("Saliendo...");
                     break;
 
-                case 1:
-                System.out.println("Añadir coche: ");
-                System.out.println("Escribe matricula: ");
-                matricula = scan.nextLine();
-                System.out.println("Escribe modelo: ");
-                modelo = scan.nextLine();
-                System.out.println("Escribe color: ");
-                color = scan.nextLine();
+
+                    //crear un switch
+                case 2:
+                Scanner scan2 = new Scanner(System.in);
+                System.out.print("Escribe matricula: ");
+                matricula = scan2.nextLine();
+                System.out.print("Escribe modelo: ");
+                modelo = scan2.nextLine();
+                System.out.print("Escribe color: ");
+                color = scan2.nextLine();
                 peaje.addCoche(new Coche(matricula, modelo, color));
+                    break;
+
+                    case 3:
+                        peaje.showCoche();
                     break;
 
                 default:
@@ -76,6 +89,9 @@ public class Autopista {
             }
 
         } while (menu != 0);
+
+        scan.close();
+        
     }
 }
 
