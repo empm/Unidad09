@@ -38,10 +38,12 @@ public class Autopista {
         carriles.addFirst(c);
     }
 
-    public void showCoche(){
+    public void showCoche() {
         System.out.println("Mostrando coches: ");
         for (Coche coche : carriles) {
-            System.out.println(coche.modelo);
+            System.out.println("Matricula: " + coche.matricula +
+                    "\nModelo: " + coche.modelo +
+                    "\nColor: " + coche.color);
         }
     }
 
