@@ -1,0 +1,17 @@
+Realitza l'exercici de  https://aprendeaprogramar.org
+
+UD09 - Ejercicio 03: Clase Inventario para tienda de mascotas
+
+Atenció: 
+L'enunciat parla del mètode void insertaMascota(Mascotas a), però per passar les proves, el mètode ha de ser void anyadirMascota(Mascotas a)
+
+La classe Mascotas requereix dels atributs:
+String nombreI
+ int edat
+String estado
+String fechaNacimiento
+
+La classe Mascotas requereix dels mètodes:
+public Mascotas( String nombreI, int edat, String estado, String fechaNacimiento)
+String getEstado()
+String getNombreI()

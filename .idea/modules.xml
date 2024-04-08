@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/U09Ejercicios2/OrdenarColecciones/OrdenarColecciones.iml" filepath="$PROJECT_DIR$/U09Ejercicios2/OrdenarColecciones/OrdenarColecciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U09Ejercicios2/PilaCola/PilaCola.iml" filepath="$PROJECT_DIR$/U09Ejercicios2/PilaCola/PilaCola.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U09.iml" filepath="$PROJECT_DIR$/U09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U09Ejercicios2/U09Ejercicios2.iml" filepath="$PROJECT_DIR$/U09Ejercicios2/U09Ejercicios2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Unitat09-Exercicis1_Solucion/src/Unitat09-Exercicis1_Solucion.iml" filepath="$PROJECT_DIR$/Unitat09-Exercicis1_Solucion/src/Unitat09-Exercicis1_Solucion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Unitat09-Exercicis1_Solucion/Unitat09-Exercicis1_Solucion1.iml" filepath="$PROJECT_DIR$/Unitat09-Exercicis1_Solucion/Unitat09-Exercicis1_Solucion1.iml" />
+    </modules>
+  </component>
+</project>

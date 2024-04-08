@@ -1,4 +1,4 @@
-package U09.U09ClaseInventario;
+package U09.EntregableU09ClaseInventario;
 
 import java.util.ArrayList;
 
